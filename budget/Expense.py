@@ -52,11 +52,9 @@ class Expenses():
             )
         }
         
-        food_expenses = {y for y in self.list
-            if (y.category == 'Groceries' or
-                y.category == 'Eating Out'
-            )
-        }
+        food_expenses = {x for x in self.list
+            if (x.category == 'Groceries' or 
+                x.category == 'Eating Out')}
 
         unnecessary_expenses = set(self.list) - necessary_expenses - food_expenses
 
